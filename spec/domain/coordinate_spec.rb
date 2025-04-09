@@ -11,7 +11,7 @@ RSpec.describe Coordinate do
     let(:x) { 10 }
 
     it "raises an error" do
-      expect { subject }.to raise_error(ArgumentError, "Invalid coordinates")
+      expect { subject }.to raise_error(Coordinate::OutOfBoundaryError)
     end
   end
 
@@ -19,7 +19,7 @@ RSpec.describe Coordinate do
     let(:y) { 10 }
 
     it "raises an error" do
-      expect { subject }.to raise_error(ArgumentError, "Invalid coordinates")
+      expect { subject }.to raise_error(Coordinate::OutOfBoundaryError)
     end
   end
 

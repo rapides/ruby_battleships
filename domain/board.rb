@@ -7,13 +7,19 @@ class Board
   HIT    = :hit
   SUNK   = :sunk
 
+  class CoordinateAlreadyAttackedError < StandardError
+    def initialize(coordinate)
+      super("Coordinate already attacked: (#{coordinate.x}, #{coordinate.y})")
+    end
+  end
+
   def initialize(ships)
     @ships = ships
     @hits  = []
   end
 
-  def attack(coordinate)
-    raise ArgumentError, 'Coordinate already attacked' if hit_exists?(coordinate)
+  def receive_attack(coordinate)
+    raise CoordinateAlreadyAttackedError.new(coordinate) if hit_exists?(coordinate)
 
     hits << coordinate
     ship = find_ship_hit(coordinate)
