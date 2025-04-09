@@ -13,12 +13,14 @@ RSpec.describe Ship do
         expect(subject.hit?(coordinate)).to be_truthy
       end
     end
+
     context "when the coordinate is not part of the ship" do
       let(:coordinate) { Coordinate.new(2, 2) }
       it "returns false" do
         expect(subject.hit?(coordinate)).to be_falsey
       end
     end
+
     context "when the coordinate is already hit" do
       let(:coordinate) { Coordinate.new(1, 2) }
       before { subject.hit?(coordinate) }
