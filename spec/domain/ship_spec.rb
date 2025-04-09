@@ -9,20 +9,20 @@ RSpec.describe Ship do
   describe "#hit?" do
     context "when the coordinate is part of the ship" do
       let(:coordinate) { Coordinate.new(1, 2) }
-      it "returns the result" do
+      it "returns true" do
         expect(subject.hit?(coordinate)).to be_truthy
       end
     end
     context "when the coordinate is not part of the ship" do
       let(:coordinate) { Coordinate.new(2, 2) }
-      it "returns the result" do
+      it "returns false" do
         expect(subject.hit?(coordinate)).to be_falsey
       end
     end
     context "when the coordinate is already hit" do
       let(:coordinate) { Coordinate.new(1, 2) }
       before { subject.hit?(coordinate) }
-      it "returns the result" do
+      it "returns false" do
         expect(subject.hit?(coordinate)).to be_falsey
       end
     end
@@ -35,7 +35,7 @@ RSpec.describe Ship do
         subject.hit?(Coordinate.new(1, 3))
       end
 
-      it "returns the result" do
+      it "returns true" do
         expect(subject.sunk?).to be_truthy
       end
     end
@@ -43,7 +43,7 @@ RSpec.describe Ship do
     context "when not all coordinates are hit" do
       before { subject.hit?(Coordinate.new(1, 2)) }
 
-      it "returns the result" do
+      it "returns false" do
         expect(subject.sunk?).to be_falsey
       end
     end

@@ -25,19 +25,19 @@ RSpec.describe Coordinate do
 
   describe "#==" do
     context "when coordinates are equal" do
-      it "returns the result" do
+      it "returns true" do
         expect(subject == Coordinate.new(1, 2)).to be_truthy
       end
     end
 
     context "when X axis is not equal" do
-      it "returns the result" do
+      it "returns false" do
         expect(subject == Coordinate.new(2, 2)).to be_falsey
       end
     end
 
     context "when Y axis is not equal" do
-      it "returns the result" do
+      it "returns false" do
         expect(subject == Coordinate.new(1, 5)).to be_falsey
       end
     end

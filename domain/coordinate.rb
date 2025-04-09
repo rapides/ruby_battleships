@@ -6,7 +6,7 @@ class Coordinate
   attr_reader :x, :y
 
   def initialize(x, y)
-    raise ArgumentError, "Invalid coordinates" unless valid?(x, y)
+    raise ArgumentError, 'Invalid coordinates' unless valid?(x, y)
     @x = x
     @y = y
   end
