@@ -27,6 +27,11 @@ Install ruby gems:
 bundle install
 ```
 
+## 🧰 Dependencies
+- Ruby (=3.3.5)
+- Bundler
+- RSpec (for tests)
+
 ## ▶️ Running the Game
 Execute `main.rb` file from the root directory:
 
@@ -40,11 +45,6 @@ The project uses rspec for test execution:
 ```bash
 bundle exec rspec
 ```
-
-## 🧰 Dependencies
-- Ruby (=3.3.5)
-- Bundler
-- RSpec (for tests)
 
 ## 🙌 Contributing
 Feel free to open issues or submit PRs with improvements! 🛠
