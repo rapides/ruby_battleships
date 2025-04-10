@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'domain/ship'
+require 'domain/coordinate'
 
 RSpec.describe Domain::Ship do
   subject { described_class.new(init_coordinates) }

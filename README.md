@@ -1,6 +1,6 @@
 # 🧱 Battleships (Ruby CLI)
 
-This is a command-line version of the classic **Battleships** game, implemented in pure Ruby.
+This is a command-line version of the classic **Battleships** game, implemented in pure Ruby following the principles of Domain-Driven Design (DDD).
 
 ---
 
@@ -28,10 +28,10 @@ bundle install
 ```
 
 ## ▶️ Running the Game
-Execute `cli.rb` file from the root directory:
+Execute `main.rb` file from the root directory:
 
 ```bash
-ruby cli.rb
+ruby main.rb
 ```
 
 ## 🧪 Running Tests

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require 'domain/board'
+require 'domain/ship'
+require 'domain/coordinate'
 
 RSpec.describe Domain::Board do
   subject do

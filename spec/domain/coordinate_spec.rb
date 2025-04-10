@@ -15,8 +15,24 @@ RSpec.describe Domain::Coordinate do
     end
   end
 
+  context "when X axis is nil" do
+    let(:x) { nil }
+
+    it "raises an error" do
+      expect { subject }.to raise_error(described_class::OutOfBoundaryError)
+    end
+  end
+
   context "when Y axis is out of bounds" do
     let(:y) { 10 }
+
+    it "raises an error" do
+      expect { subject }.to raise_error(described_class::OutOfBoundaryError)
+    end
+  end
+
+  context "when Y axis is nil" do
+    let(:y) { nil }
 
     it "raises an error" do
       expect { subject }.to raise_error(described_class::OutOfBoundaryError)

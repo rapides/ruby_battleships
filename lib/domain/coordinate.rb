@@ -33,7 +33,7 @@ module Domain
     private
 
     def valid?(x, y)
-      x.between?(0, MAX_X_AXIS) && y.between?(0, MAX_Y_AXIS)
+      x&.between?(0, MAX_X_AXIS) && y&.between?(0, MAX_Y_AXIS)
     end
   end
 end
